@@ -1,0 +1,508 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="argument" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1234,1318</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="80">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="558,1253" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable" />
+      <Variable x:TypeArguments="x:String" Name="dfdsfds" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="496,637" sap2010:WorkflowViewState.IdRef="Sequence_26">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Google Chrome: Is there a keyboard shortcut to open a link in a new tab? - Super" sap:VirtualizedContainerService.HintSize="434,515" sap2010:WorkflowViewState.IdRef="NApplicationCard_11" InteractionMode="DebuggerApi" ScopeGuid="06c4ef07-5a35-4958-b695-a1f51da5bb2c" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,289" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'posted it on Askubuntu'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="Ctrl" MouseButton="Left" ScopeIdentifier="06c4ef07-5a35-4958-b695-a1f51da5bb2c" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://superuser.com/questions/195419/google-chrome-is-there-a-keyboard-shortcut-to-open-a-link-in-a-new-tab" DesignTimeRectangle="919, 500, 135, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'posted it on Askubuntu'" FullSelectorArgument="&lt;webctrl parentid='comment-2464060' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='comment-2464060' tag='A' type='' class='' aaname='posted it on Askubuntu' check:innerText='posted it on Askubuntu' /&gt;" Guid="0f864242-45b1-4448-acbe-a00d5b97999c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIsAAAATCAYAAACgLP7RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVGhD7ZdNTmMxDMfniNymZ+ESZffWXbFAbNrFVMyqm5FAzGZOEOI4TmzHeU1gOlTgnxSp+bDjj38e4kdwnEFcLM4wLhZnGBeLM8xVi+X58SFsHl/zjHMKt9v7cPuUp1cO5HGzO+XZOIfdfSf/z+GyYnk5hs12Hw55OktfLJL/X1QU6+id1yeW17As84/NxfIOUly7fdgsx/Cc19b4emKhxj7tw018NWmoBFPStLd9CMtL3oiIPbDjfuKoSeOrxHXpA2PIe7ERh65YwAfYYtL1np4w+Z1x8LyMvNcbBHfS3Sr+SFMHWqM7c454B8QlYwaBUBNRLCeWI79v1pbOqlokwa/7IpRYonEpJDaiFC4VkzmkIsNv2LNeGT+TUIoW+xAwK4YoqkaexcL0GqzyiIjzOu80b0VQgP2ca/PF6NShnsNG1SasNwl+C4GIHszZprnq7WgcRPtlydNESV47R4pDyxbQ600xwS8m1BQ+AmsfFovVQNbwNnY7V0LcpW07dcDcjo1oRxouz/PYJm1FHS4hllLU2lSOaGZSPaiZ+dA+yxk5IChLGP9MLEqEojhG3lahEHkv0Jw16pDEAmtatLMNj9T9SdvSS+ASYimFtl+b5TDZ9F6t2TgEX5/caxIuyKb1z0V4PAQv3IxYihDUaEQQYfdSbuBX5jgrFv5oP10s/AJwUA3wdTCHRpETfL05I30K0ln2apt4OOBnUCz5Tr4vzht5WIXqPRgdS4H5rQ8BfVTBKJ9ZjDSHOJovVK/hhq2oCcTTFcu6L6L5sixJFPhidANQMLgnhCNenCwcJqybQ2fj4K+S+4nr5/8bytPiUza9goIh300RlZ0pFuMckXIEAXTqUMUC5Fgob24Tz/C7seFHFru6/6xtTywRsh2Ig1j/M+Q4jCSWn3/+CrEUhfn49uPu12+QSMK/LM4wVSyOcwYXizNICG9AUNNpNErJXwAAAABJRU5ErkJggg==" InformativeScreenshot="48e28ec72ca2328c55114ad2791aa513.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google Chrome: Is there a keyboard shortcut to open a link in a new tab? - Super User' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH8SURBVFhH7Ze9S8NAGMYjgi7SZBEUwUmEpIPifyEOOjg5OouTODm4+TFodRREBwW5JDo4OYg4uZUO3Yofl1QEFwdBqSLxvfCKuUuaS+gpIn3gGXLvkz6/piTXaKIMQ38HB2nGqGY5XhDxNXjPdO8mtCDowEh+JRWKxqgIEHW5eFwfwVg+JRWKxqgI8CEcN0zHm8JodiWUZbqccOn7Lds7FCDecl+JBIBcMh26w0PQKxxlU6sAFnnsgeInDoLUR3EsV6sATPBTHHEAjj+HI7mUADh+KQpQtOkajuT6CQB2jCO52gB5AAzDmIRMGVwBX8CxwdZ/EaBQ4vNGeLv9BYAVDsCm5+EJWcR/YDqArutjkNkFkH3wBix1s3XL9sc5AGaXTrOZVHkAmgq2Y9iIzgQI2KzolkXuBzGVLCUAoKGDWgFKTwSIEATgTjEWlyqAL0HhrAAQGsdxqQSAPWEByl7FcrgCLxiJSxWA6fqLYjH4Jlwnt30Yi0sFwDDxB6CsES0P/yeQahdGmksFANz389FycFUjQSeO06UCoGh7mzwAXceRXCoAYo9imy7jSK42wP8AsOm2SoB873mwEUHpZRTAdL0lnMolAiQZo+w5//0t0+z6M3iKXEmFojGaFaDGXlbwFLmgoCEWisZoGsAzPHwqpuOvDpGHXownSNM+AY9J00RkO3xLAAAAAElFTkSuQmCC" InformativeScreenshot="c0930b26e68718a9eecadbaa978d57e3.jpg" Selector="&lt;html app='chrome.exe' title='Google Chrome: Is there a keyboard shortcut to open a link in a new tab? - Super User' /&gt;" Url="https://superuser.com/questions/195419/google-chrome-is-there-a-keyboard-shortcut-to-open-a-link-in-a-new-tab" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sequence.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="496,122" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequence.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="dsfsdfa" CacheStrategy="None" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="496,61" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[dfdsfds]</OutArgument>
+      </ui:GetRobotAsset.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotAsset>
+    <While sap:VirtualizedContainerService.HintSize="496,61" sap2010:WorkflowViewState.IdRef="While_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <While.Condition>True</While.Condition>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472,988" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: EXAM: Global Introduction to Global Monitoring System" sap:VirtualizedContainerService.HintSize="434,751" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,525" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Int32" Name="index" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'Start'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Timeout="1" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Welcome" DesignTimeRectangle="317, 833, 195, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Start'" FullSelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Start' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Start' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild sapMTBShrinkItem' aaname='Start' check:innerText='Start' /&gt;" Guid="0f5a3729-5703-4158-9c13-7a8d1164d085" InformativeScreenshot="ab1a592ef2a5e1d46d20f29bdb3f0dd7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <Assign sap:VirtualizedContainerService.HintSize="338,71" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[index]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[new Random().Next(1,5)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'SAP.M.RADIOBUTTON __but…'" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Question/1/SingleAnswer" DesignTimeRectangle="96, 289, 33, 32" DesignTimeScaleFactor="1" ElementType="RadioButton" FriendlyName="'SAP.M.RADIOBUTTON __but…'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl idx='{0}' ui5-role='radio' /&gt;&quot;, index)]" FuzzySelectorArgument="&lt;webctrl ui5-role='radio' tag='DIV' type='' class='sapMRb' aaname='' /&gt;" Guid="eaa45a43-2c01-489b-b064-014f4217fa92" ImageBase64="" InformativeScreenshot="3d0a4b78dabf78ff84fac1038716b529.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Timeout="1" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Question/1/SingleAnswer" DesignTimeRectangle="754, 834, 46, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Next' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Next' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild' aaname='Next' check:innerText='Next' /&gt;" Guid="bd63e4d5-d1b7-48e2-819b-553dbce7e7f7" InformativeScreenshot="fd9a6cfc0dbea144e41bc28b00828fd7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVDhPlZNLTxpRGIZHSgOLxgQSDdNu7LobVyTKxm5MrPUXsMIdcds/ULp1EjZqo2ZsBhK1hrbElg2J0IWLpiltQpCLOCpWIYjoVKQq4OuZM5dA6CT0Td7M5JzzPfNdzjD4D/E8D4ZhdJtMJvQMkCQJLpeLBtpsNgiCgHK53DsgmUyCZVkK8Hg86ioUwO9aA/mLG+SIa7ctutGuarWKQCAAs9lMAT6fD4VCAaIognFuiGBXshjksxjgMxgScpjeOqYwTW63m6at1W632+FwONSM5lL4l58GckicNSjA6XTqwd0mh+3LGTz/dIBnq/kOyHjkBLXrW3wIh+H1evUS5Iw4joPf7wfz+F0WkcNL1Bt3kG5amP1ZwWhoHyMhERObB9iVlCwSiQSsVisFhAlQE2OaT+HF50Mspc6xXbxCunqN079NdRto3SnPWCwGi8VCAcFgUFkk6urBo8U0xkg5r7+XUWkDGQIeLux0ANo9STIr1ZUSDAHFqwZW0ud4tV3Cyy8FOtK+Nsj7vUt60BDA/aqor4p2yfyfkMZqgDc/zuh6PB7vAjSbTaUHU+TLQuYCH8U/mPlaRP9SWges5Y0z0AGyH5BpWN529mN4fQ9H5JrL6nkKmuUr/q1UV48B0WiUBsuWf2tFwD0uqumWxKHnIAAAAABJRU5ErkJggg==" InformativeScreenshot="81a421fedfd10fb415a1c39bca0df2f7.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" Url="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Welcome" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="438,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence sap:VirtualizedContainerService.HintSize="602,1901" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="qyestions" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: EXAM: Global Introduction to Global Monitoring System" sap:VirtualizedContainerService.HintSize="560,1455" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence sap:VirtualizedContainerService.HintSize="526,1239" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Submit Exam'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Question/8/SingleAnswer" DesignTimeRectangle="696, 834, 104, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit Exam'" FullSelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Submit Exam' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-role='button' ui5p-text='Submit Exam' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild' aaname='Submit Exam' check:innerText='Submit Exam' /&gt;" Guid="fdba8ee4-c41a-4975-ab9e-1d39b1daa733" InformativeScreenshot="7e35ab7d9312b40741fd64ae600ff99b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'Yes'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Question/8/SingleAnswer" DesignTimeRectangle="616, 502, 64, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Yes'" FullSelectorArgument="&lt;webctrl ui5-role='button' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-role='button' tag='BUTTON' type='' class='sapMBtnBase sapMBtn sapMBtnInverted sapMBarChild' aaname='Yes' check:innerText='Yes' /&gt;" Guid="b6b9e7e1-de15-45be-af3c-e7a03de4dee1" InformativeScreenshot="62a040a9c47f7c74f48b7a926026e1ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NGetText DisplayName="Get Text '2 of 8 questions correct'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" TextString="[qyestions]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Results" DesignTimeRectangle="336, 289, 145, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'2 of 8 questions correct'" FullSelectorArgument="&lt;webctrl ui5-class='sap.m.Text' /&gt;" FuzzySelectorArgument="&lt;webctrl ui5-class='sap.m.Text' tag='SPAN' type='' class='sapMText sapUiSelectable sapMTextMaxWidth sapUiSmallMarginBottom' /&gt;" Guid="73d64a7e-8dd4-4acb-aa87-b2f804a340ab" ImageBase64="" InformativeScreenshot="256d331fca4d7f048b29fb25fcc0841d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Glob*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <If Condition="[CInt(qyestions.Split(&quot;o&quot;c)(0).Trim) &gt; 4]" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="326,173" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message box" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Want to cuntinue ?&quot;]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <uix:NClick ClickType="Single" DisplayName="Click 'ExitExit'" sap:VirtualizedContainerService.HintSize="484,156" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Results" DesignTimeRectangle="689, 66, 63, 28" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'ExitExit'" FullSelectorArgument="&lt;webctrl idx='3' ui5-tooltip='Exit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' ui5-tooltip='Exit' type='' class='sapMBtnBase quizUiExitButton sapMBarChild' aaname='Exit' check:innerText='Exit' /&gt;" Guid="46216e7d-3e45-4775-8651-f387f6bc2673" InformativeScreenshot="1d21ec98131e551613bf8c8104278e96.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVDhPlZNLTxpRGIZHSgOLxgQSDdNu7LobVyTKxm5MrPUXsMIdcds/ULp1EjZqo2ZsBhK1hrbElg2J0IWLpiltQpCLOCpWIYjoVKQq4OuZM5dA6CT0Td7M5JzzPfNdzjD4D/E8D4ZhdJtMJvQMkCQJLpeLBtpsNgiCgHK53DsgmUyCZVkK8Hg86ioUwO9aA/mLG+SIa7ctutGuarWKQCAAs9lMAT6fD4VCAaIognFuiGBXshjksxjgMxgScpjeOqYwTW63m6at1W632+FwONSM5lL4l58GckicNSjA6XTqwd0mh+3LGTz/dIBnq/kOyHjkBLXrW3wIh+H1evUS5Iw4joPf7wfz+F0WkcNL1Bt3kG5amP1ZwWhoHyMhERObB9iVlCwSiQSsVisFhAlQE2OaT+HF50Mspc6xXbxCunqN079NdRto3SnPWCwGi8VCAcFgUFkk6urBo8U0xkg5r7+XUWkDGQIeLux0ANo9STIr1ZUSDAHFqwZW0ud4tV3Cyy8FOtK+Nsj7vUt60BDA/aqor4p2yfyfkMZqgDc/zuh6PB7vAjSbTaUHU+TLQuYCH8U/mPlaRP9SWges5Y0z0AGyH5BpWN529mN4fQ9H5JrL6nkKmuUr/q1UV48B0WiUBsuWf2tFwD0uqumWxKHnIAAAAABJRU5ErkJggg==" InformativeScreenshot="81a421fedfd10fb415a1c39bca0df2f7.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='examWindow' title='EXAM: Global Introduction to Global Monitoring System' /&gt;" Url="https://eygsl.plateau.com/learning/ui/user-assessment/pages/user_assessment.jsp?studentComponentID=36503211&amp;moduleID=693177&amp;quizID=da3c7dcd-8858-4d0e-b25b-689a78c5c7cd&amp;moduleName=EXAM%3A%20Global%20Introduction%20to%20Global%20Monitoring%20System#/Welcome" />
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  submitButton'" sap:VirtualizedContainerService.HintSize="560,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ce8da61b-ed4f-4280-be4e-edbe36666329" InformativeScreenshot="c14ed831b01c4bae275e8ff2e682e67f" Selector="&lt;html app='chrome.exe' htmlwindowname='_top' title='SuccessFactors*' /&gt;&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='submitButton' tableRow='5' tag='BUTTON' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5000" DisplayName="Click 'A EXAM:'" sap:VirtualizedContainerService.HintSize="560,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5bbd38b4-cc97-42ea-95d5-1b2e79598eb3" InformativeScreenshot="6d52c3d62104884eb98c0c5ffea4fa69" Selector="&lt;html app='chrome.exe' title='SuccessFactors*' /&gt;&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tableCol='4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='EXAM: Global Introduction to Global Monitoring System' tableRow='1' tag='A' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:CommentOut DisplayName="Comment out" sap:VirtualizedContainerService.HintSize="560,22" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SuccessFactors Learning → Learning → Plan → Content Structure" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="c1e9e820-16da-413f-a2c7-481391cabe97" Version="V2">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,446" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Return to'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e27ba2e0-69df-4953-a1d2-27f1cdd70cce" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://eygsl.plateau.com/learning/user/onlineaccess/launchModuleAction.do?OWASP_CSRFTOKEN=RVJW-9FSG-1M9B-5SH0-VM2T-6IJJ-2TZJ-SFYF" DesignTimeRectangle="1176, 377, 193, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Return to'" FullSelectorArgument="&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='submitButton' tableRow='5' tag='BUTTON' /&gt;" FuzzyAccuracy="0.94" FuzzySelectorArgument="&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='submitButton' type='button' tag='BUTTON' class='globalSecondaryButton buttonDefault' aaname='Return to Content Structure' check:innerText='Return to Content Structure' /&gt;" Guid="f7478bbb-0a51-4a6d-9523-a7d42b6d71f1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMUAAAAeCAYAAACcwdocAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP9SURBVHhe7ZxLahwxEIZzlrmTDb7GLMycwqvxLQxeeW1wjEkIhkAgCy+coygqSSXVq6WemR7n0SX4wN0t1fvv9mo+BV++fLHlovDlSywmivf39/D5+Tk8Pj46ziqAeYe5p6uKAh58+fotfP/5Fn68/XKcVQDzDnNPhVFFAYpxQThrBOYe5h9XFQV8SqwDjrMGYP5xuSgcJ+KicByBi8JxBC4KxxEsIIqHsN1swsbi+sHYPwXYuQo3L9azc7CMv6f9Fc/58jY8GfuO4zXcXG7C9t56dgT3u3F8sIfmI2s0x8bRfPQM2CwkCiuRLJaL/au4P8W/Joo8sHJA7q5hkHbhjtw7ng8WRRKEiL2IpMbgopjDdCLpLcoKWAYJ30L1WRYQ3ocG6LN5DzYHhm+7vw0X6Qz4L3HscxMzU8Op/aX7ZQAy/ebo+JCcI3sZdOxCHhcxDx0Pr1Wzx2NnX+MXqMcu1oB8vTBGFoNdlyRo4+te7xs2oA40/u097xOgapXiRDuYm9GTtE/XC2PUvvOe5K/a6vfR4gNFoYeFN4HbUYUsRcPE01nW3FJU4c9qcttP4k4N71wzjMGfYmA359Guc0Mxr+ynDRivgYoDh43VlDwH36ymnOx7KueCsKHPyBhlL+Vzeg1/E1szRCHj5b4iqd5TL0ebM4oiJ9tvCD3L7ajkij0sJheUfg5oGxTqzx5y7QPRvmzGdpUPNghcFCkfGU/aX5o+GKKRKIC0P+ZWkf4sUXT6JPfM70lkjiiUb74fz8ge9FhIFKKQBRpISsDY05TOExoVWw2TeA7Mb4A+C6TzcigS9n7N2K7KoyMKNbCV5UTRyL7RR83hRFHovlFoTyKHiiLtbzFT/oAojMDFJ0sXT8LtjIqti9tvRtuHUH/6LJDOmw20vwCasV2Vx0gUZjyFRUXRYHX860XB9x/DWURR3zI0YChm9387bmdUbF3cfjPaPoT6s4e818Ce7XZubFf56Iiin0/kJFHo+lVo704UxfyeRA4VRS+HAziTKCIpIdrwIhQ6AEwowk561q5TAUjCapgGzWj7kL4/da0whB9JcR1g9xBRYI7q31KM4SRRYI35eSVsYUPXWPY5x9z2yD5R+6InMl8xU1Z/cw705Sv9jTmfKIA0ALSJOcD2vx7/cuSBavvxOt97YAOihslI3ioaRfrDeDMTOQlojAnLX8euykMMdm4y2YODgVB/I1HU+ndyY7Fm+EBxG2aNWYyxx0JIKgeSf7cn0cYd+Cv7p/ore3KIIIAFROE4/xcuCscRuCgcR+CicByBi8JxBKYo/IcLnLUy+cMF/hM3zhqBeZ/8iRtY8AAUA58Sx1kDMO9UELCYKHz58uWi8OVLrBB+A0F3EoM+1d+tAAAAAElFTkSuQmCC" InformativeScreenshot="32ec45b956b8011567c7714431e04383.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'EXAM: Global'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c1e9e820-16da-413f-a2c7-481391cabe97" Version="V3">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable Accuracy="1" BrowserURL="https://eygsl.plateau.com/learning/user/onlineaccess/finishModuleAction.do" DesignTimeRectangle="696, 553, 283, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'EXAM: Global'" FullSelectorArgument="&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tableCol='4' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='EXAM: Global Introduction to Global Monitoring System' tableRow='1' tag='A' /&gt;" FuzzyAccuracy="0.98" FuzzySelectorArgument="&lt;webctrl id='frmpmod' tag='IFRAME' /&gt;&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='EXAM: Global Introduction to Global Monitoring System' type='' tag='A' class='' aaname='EXAM: Global Introduction to Global Monitoring System' check:innerText='EXAM: Global Introduction to Global Monitoring System' /&gt;" Guid="9d2496c1-ad19-4f6c-85d6-c73c812ffa2b" ImageBase64="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" InformativeScreenshot="9a3a1a20bd66598bf035a6dfd4a98916.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVDhPlZNLTxpRGIZHSgOLxgQSDdNu7LobVyTKxm5MrPUXsMIdcds/ULp1EjZqo2ZsBhK1hrbElg2J0IWLpiltQpCLOCpWIYjoVKQq4OuZM5dA6CT0Td7M5JzzPfNdzjD4D/E8D4ZhdJtMJvQMkCQJLpeLBtpsNgiCgHK53DsgmUyCZVkK8Hg86ioUwO9aA/mLG+SIa7ctutGuarWKQCAAs9lMAT6fD4VCAaIognFuiGBXshjksxjgMxgScpjeOqYwTW63m6at1W632+FwONSM5lL4l58GckicNSjA6XTqwd0mh+3LGTz/dIBnq/kOyHjkBLXrW3wIh+H1evUS5Iw4joPf7wfz+F0WkcNL1Bt3kG5amP1ZwWhoHyMhERObB9iVlCwSiQSsVisFhAlQE2OaT+HF50Mspc6xXbxCunqN079NdRto3SnPWCwGi8VCAcFgUFkk6urBo8U0xkg5r7+XUWkDGQIeLux0ANo9STIr1ZUSDAHFqwZW0ud4tV3Cyy8FOtK+Nsj7vUt60BDA/aqor4p2yfyfkMZqgDc/zuh6PB7vAjSbTaUHU+TLQuYCH8U/mPlaRP9SWges5Y0z0AGyH5BpWN529mN4fQ9H5JrL6nkKmuUr/q1UV48B0WiUBsuWf2tFwD0uqumWxKHnIAAAAABJRU5ErkJggg==" InformativeScreenshot="277613b8cd644fcba19c7e0a7a090978.jpg" Selector="&lt;html app='chrome.exe' htmlwindowname='*' title='*' /&gt;" Url="https://eygsl.plateau.com/learning/user/learning/*" />
+                        </uix:NApplicationCard.TargetApp>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </While>
+    <Sequence sap:VirtualizedContainerService.HintSize="496,90" sap2010:WorkflowViewState.IdRef="Sequence_22">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Windows Security" sap:VirtualizedContainerService.HintSize="434,854" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" ScopeGuid="5486b5da-77ca-4035-bb04-4d00513ecb99" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,555" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'PIN'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="5486b5da-77ca-4035-bb04-4d00513ecb99" Text="Aa6684" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="85, 116, 296, 32" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'PIN'" FullSelectorArgument="&lt;ctrl automationid='PasswordField_0' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='PasswordField_0' role='editable text' /&gt;" Guid="4dd0f724-b325-41bd-98f6-b364c0e58039" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAASwAAAAkCAYAAAAzWQesAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFHSURBVHhe7dbBjYJQFIZROqHNacUKrIAKaMCdG/euqYDJJWIYRvFFDHKTc5I/Pp+w/WJV13VvZpZhgmVmaXYPVvVzNjPb5R4GC2BvBAtIQ7CANAQLSEOwgDQEC0jj7WBVVXU7AWxDsIA0BAtIQ7CANAQLSGNVsJqm6Q+Hw59NHY/H/nK5DOeu64bf4525eCaeBViyOlin0+l20w/nabQeBWt6NxIsoMRHgxUiPNfr9X6eByu+z/+JCRZQYvNgxWe817btcB8ECyjx0WBFhKbheRasEOcxbIIFlFgdrAjPuPg+tRSsaaQECyjx0X9Yc0vBCuP7ggWU+GqwxjvBAkp8NVgh3o97wQJe+XqwQjwnWMArq4IFsCXBAtIQLCANwQLSeDtYAFsTLCANwQLSECwgDcEC0ngaLDOzPe5fsMzM9j7BMrMkq/tfVwKs7TZRTAMAAAAASUVORK5CYII=" InformativeScreenshot="66650c7fdb52d2f24cbe3641b748b66e.png" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5486b5da-77ca-4035-bb04-4d00513ecb99" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="25, 211, 201, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'OK'" FullSelectorArgument="&lt;ctrl automationid='OkButton' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='OkButton' role='push button' check:text='OK' /&gt;" Guid="99c8921b-8532-4ed3-8171-c1401b354495" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAM0AAAAkCAYAAAAq974jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEzSURBVHhe7dnRbcIwFEDRbpKF2CezMAdLMEIWyAJZgOohuXJcSHmVsPk4TzpSEjufV47ga5qmG/A60UDSTzSn0wk4IBpIEg0kiQaSRANJooEk0UCSaCBJNJAkGkgSDSSJ5kNs23ar53q97tbP5/P9ef0s9sTEWv2c9xLNYCWGNpJ1Xe/afeX+crns7ulHNIPFCRMB/LVWR1Ou53ne7acP0QzUnh6tCKacNvXemLiv99KPaAaqo3gkwojTplzHHJ1M9CGagf4bzdE7vJ9oBiohPFoLzz7PIpxlWXZ76Uc0gx19btVrbWAx7S9u9CGawUoMbTjtZ1gbzbP3eD/RfIh2XvlzM4KJceL0JRpIEg0kiQaSRANJooEk0UCSaCBJNJAkGkgSDSSJBpJ+RQO8RjSQMt2+AUzH/jHsc9r4AAAAAElFTkSuQmCC" InformativeScreenshot="c2c45e5cf0a26c23a2f21bd8c3e0d5cc.png" ScopeSelectorArgument="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="732, 406, 456, 268" FilePath="C:\Windows\System32\credentialuibroker.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ9SURBVFhH7ZfbU1tVFMYzffDF6av/gDP+Fb5jbbWWcmmh15RWqTN0KgUBgZJA7gGaBqiU0BAuIRACxWq1WF9rIfWhT/pU3/AFyO3k5Aqfa52TyymelItOfNA9880+7L3Z32+tvc7JOZr/27/eLHZHp67PjHKqz2jTkfVbpCMak8W289urdbz89XfSq39Un7U7VHuGIPN3JAizdUD8eTWIv6PVtRdYC/6CtReyVun6OY2x1NbnAN4lva2hdIixeALpVBKpZOIQkv8vqaLda9lDTGXyAO+RjhKAVeTBcuovAJlsVppYWXmGpz+93JdWfnyGbCYtKRgMqiof+fvXJyTxtSpANgfAG1d1LaC624+annnU6udwxuDDWZMP9TYv6vtncN4xhQvOSWntH+vrSCXiBaNSOhDAZfMytNaH0NqW0DCwiKuOAK45F/DpyDwaR+dw3eXD5+5ZBYCgGj1rXwD8x7YCoMn5HZqGv8WNe49w8z7JtYxm90Pc8iyhZXoRrd4A2ub8BYA0AfDGyaQo9wm5V4rNK3qHpWtVAEGUJ3jTtvEn6HD/gA7P9+icfowvyPyG24/GcS+ujLmhdY2jYcJVBBDjqtGz8gBsfuqerTRAVBALAHrvU9yeeYKGIR9OmsfwgXEIH1rv4kS/Ax/dGcRJZz9OjdgUALkMUOTS7cf9riywef1Mz/4Amh98gxOGUVT0DeOY2YnjNjIfuIOP7w7gk2G7tNnp+xYFQEw1elYegM0bHzeVBogpACr0I3LUFjIvRE3mI3ZUfm3F6TEzqh8YiwBUA0l6GCXoKPKGu8XmbwaIFwGOmXIp56gdZD5EKaeoK0ctqHKZUOM24IyntwCQoiNQi551AAB5gjc9bqeoBxUp56gp5dXjJtRO9OHspB51lNICQFw40GN8TwBloVWOWlFFKa+hlNd6yHxKR+d5G+d9XUUAOgK16FmHAlAWWnU+5ZO9qJvuwTlvNy7MdeKSv/01gFTuDlAz3K09AZSFJqV8Si9HPduFi/Nf4dJCO7SLrQWABNUAF6DaA4jHRJqLRqMIh8OIhEN7AygLrW5aR1Fzyjtx0d+By4E2XFlqRcPyrQJA8g23YTJB+xJgJBJGKBRCOLRVAkDxJFQW2rlZTjlFTSnXBr4k8xZcXW7GtUc3FQBR1ejzGYhTkXLkm5ub2NraVAeIi/KLwuTUorTxfjThCchHQAZq0bPigoBYNELGWzIASRUgEpMzwL/tvOlBFI8VM8A914MgxBClcT53jnpjY0NSSYBQNAH+ScZ2CumkACANZGksFUeGhO0kje2Qtkm0jueRwk5GLjI2ls1FCJSRGJlHKfIwnT2ff16cjZIAPFEuvQbA7+jdOkOCBw+jXqMVRosdFvsgTNZBGEw26FXWKdXc0j5E5vJbMTX+QOB3dB5gqnKIveTvAmpHchdMc7RMYi/5y+g/3jSaPwH2G61IeD/6MgAAAABJRU5ErkJggg==" InformativeScreenshot="39ec2745bb65ddcb55fa4b9dc9a79d0d.png" Selector="&lt;wnd app='credentialuibroker.exe' cls='Credential Dialog Xaml Host' title='Windows Security' /&gt;" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: רשות המיסים - מערכת דיווח מפורט" sap:VirtualizedContainerService.HintSize="434,721" sap2010:WorkflowViewState.IdRef="NApplicationCard_10" InteractionMode="DebuggerApi" ScopeGuid="7d9dd388-dcbc-4997-8ced-6f470874c4ea" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,495" sap2010:WorkflowViewState.IdRef="Sequence_25">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ClickType="Single" DisplayName="Click 'הצגת דוחות'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d9dd388-dcbc-4997-8ced-6f470874c4ea" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://shaam.taxes.gov.il/Emmfrt/frmBuildMenu.aspx?cur=0" DesignTimeRectangle="1274, 202, 80, 42" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'הצגת דוחות'" FullSelectorArgument="&lt;webctrl aaname='הצגת דוחות' parentid='top_menu' tag='A' /&gt;" FuzzyAccuracy="0.99" FuzzySelectorArgument="&lt;webctrl aaname='הצגת דוחות' parentid='top_menu' tag='A' type='' class='' check:innerText='הצגת דוחות' /&gt;" Guid="f6476f2b-16c4-4428-a412-1f5b4626fea2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAuCAYAAAC20j5mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQGSURBVGhD7dbbb1RFHAfw39/kBZGKkoDGW5qoQGj3ArbEbWuIxoiNosRqsZTiDRUf1MbWhaLgDVsSWkhJeBBTSLu2TSBtaaU0xdIGJBQKL1/ncuacObOz2/Mwb52TfLIzv99cfueX87D03Yk/4blDFTsOwnOHnm/YD27NlnewoaZZjJ+rb8MzuVbh2bp94pfHVjLVp1JU/+jJur3g1m57HxtyLXj61TY8Vd8qxjzOx2q+kqk+laL6R5nmH8ClPuhAdk9eSH/Yieqm70WMj71O0aNyVP+o4esT0NUf7EHuyz+Euq+6Q+Y6z45qPv8V3PYvfhe/XO2B38Sc42NO5Tw71T/KfvozuMwnx5D++Kiw9bNfsI0lVZz/8thKpvpUiuofZfezAJPedxTVe39EqvUnZNqOCWp++J/7sD4Lk2KvNIkZFpoZlvOuK8V7Fq/8Ha3vn8Mi7mO0n42HbwUrzCfIh3eofbbnFs5o684sBOHwDFlfrGZ+79Icuth42XqXofpHVR91gcuwQIo3kOHjNGvklj2HUd1yBFne3JYJXGWXXC0cETE1X5wajM1VPj/FCrx7DXmRs6w/dU00dOSUymsK/xl7i/XPs8PmJ+Jzy57YOn6udmdxjRpRX1Sv6lMpqn+Uau5EMmPyCxzSYkM3WUGzOGTJH5q6p+W02PyYnPfNsoLvYbQvyodi59rJRgVnCfz+4vPMOvR9sXosbO+wHKpqziOZcfkFDmkx/uK4iX5LPh8Uk1drzVjQ0JG+KB8KGqrvNcnGjGsxS31MUR3q3qEy9ysJ6jDRxqZOJDMmCx7UYoOyoact+Y5J+SIdaq0ZOzmL2+yFhk9G+RA/19hrOn2dXXZ9TItZ6mOWraNMLEkdJqrc9S2SuYRpVvD0BS124QaL3ECvJd8+wQucQbtaa8Z6ZkRDCz1RPsTPNfaaeufYZXOXtJhZn5yLp+isv1C4G38XW71J6jBR5dvfIJmLsuDzWux80FBLPixQrTVj3UFDu6N8iJ9r7DXJhl7UYvr950TDbk+cK31PrHZ7vUnqMFHlzgMo7ywKd9jd4llAr54b4P9NVGxUvtCAzLWPLwF3ptGurY/Fjk+zF11C4XiUD/Fzjb2KOCN41F1SdL9cY9alv4f2/DsanWveWaYOu7Og9bkmeO7Qqs074LlDD76Yg+eOb6hj9MALr8Bzx3+hjvmGOkYPvVQHzx16eGM9PHdo1aYGeO7QI5teg+cOrd78Ojx36NGqN+C5QxWpN+G5Q2vSO+G5QxWZt+C5Q49lG+G5QxVbG+G5Q2tf3gXPHd9Qx+jxmnfhueMb6hg9UfsePHd8Qx2jddt3w3PHN9QxWl+zG547tDrVCM8dWlfLPlXPGRoYuQzPlcv4H9G7zTygmu2kAAAAAElFTkSuQmCC" InformativeScreenshot="46d65916aef35b4386164698ec14f70f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick ClickType="Single" DisplayName="Click 'רשימת דוחות לתיק'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7d9dd388-dcbc-4997-8ced-6f470874c4ea" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://shaam.taxes.gov.il/Emmfrt/frmBuildMenu.aspx?cur=0#" DesignTimeRectangle="8, 111, 0, 0" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'רשימת דוחות לתיק'" FullSelectorArgument="&lt;webctrl aaname='רשימת דוחות לתיק' parentid='top_menu' tag='A' /&gt;" FuzzyAccuracy="0.96" FuzzySelectorArgument="&lt;webctrl aaname='רשימת דוחות לתיק' parentid='top_menu' tag='A' type='' class='' check:innerText='רשימת דוחות לתיק' /&gt;" Guid="726e8c34-6710-4fe4-97d6-6d97afeed653" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAgSURBVBhXYwCC/zBgamb1H0UgITEFVeD0lXvoAvf+AwDFfi6dC+xIPAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="cc3590b7b117dfdadb90d245a6c4cb1f.jpg" Selector="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" Url="https://shaam.taxes.gov.il/Emmfrt/frmBuildMenu.aspx?cur=0" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: רשות המיסים - מערכת דיווח מפורט" sap:VirtualizedContainerService.HintSize="434,61" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" ScopeGuid="c40900be-57d8-4c6c-a47f-437f8d6fc054" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,555" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT HstTikim1_EmTwbCt…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="c40900be-57d8-4c6c-a47f-437f8d6fc054" Text="557652583" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://shaam.taxes.gov.il/Emmfrt/frmViewDuchot.aspx?cur=2&amp;FromMenu=True" DesignTimeRectangle="1235, 369, 108, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT HstTikim1_EmTwbCt…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table' parentid='HstTikim1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' rowName='מספר עוסק:' idx='1' /&gt;" FuzzyAccuracy="0.94" FuzzySelectorArgument="&lt;webctrl parentid='*' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' rowName='מספר עוסק:' class='' aaname='' /&gt;" Guid="6c821de7-f45a-4836-8b3e-f3e2fa9628c4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHAAAAAYCAYAAAAiR3l8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC8SURBVGhD7doxCoNAFEXRLGEWMLucdc4i0qUUxCJF/OEJIw6J/X9wL7xCxepgNT6eryWY707AdXvHZ9+DcicjWU2AuqFaa1FrjVIKSzjZyEgNxANQqnrw7yWWb7KS2QmoxpfXez+uKV+ykZGs1AQ4dCl3VycADQPQPADNA9A8AM0D0DwAzQPQPADNA9A8AM0D0DwAzbsF5Dgpf7fHSRzoeu3nQJdfKjwmGxmp6ZeKgShVyp2MBt4EyBy3xBe0szTxjpBLhgAAAABJRU5ErkJggg==" InformativeScreenshot="861e27e9381a7912d6f9a5d5c516866d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click 'INPUT HstTikim1_EmTwbCt…'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c40900be-57d8-4c6c-a47f-437f8d6fc054" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://shaam.taxes.gov.il/Emmfrt/frmViewDuchot.aspx?cur=2&amp;FromMenu=True" DesignTimeRectangle="1170, 371, 18, 18" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'INPUT HstTikim1_EmTwbCt…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;table' parentid='HstTikim1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl name='ctl00$ContentUsersPage$HstTikim1$HstTikim1_EmTwbCtlHstTikim_BtnS*' tableRow='1' tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='arrnext' tag='INPUT' type='submit' aaname='המשך' /&gt;" Guid="3e87a4cf-2730-4418-abe5-0cc012c29790" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJISURBVEhLxZTtS1RREMb9EggRhPqhjyEEIgiSRBZlVoggWFSIKGUglbCkZBpLaSqbWWxF5QuStmxa5guIiEZIyqIJi6AL5uILbpaumMQi/gcTz8AZ7tl7dxcC8cPDvcwz87vnzJl74ta3d2kvtD9g38omvfw0TsW1LkovekJphQ66XNVO1W8HyTO3almjZAle2QhRubOfDp65S3EZdyIqr6KFpufXTPWQCTzj3+DVqeLc8mZ65h6j4akFGp32U3OfhwofdlLihfvsHz53j3rHZjUGpIGx0tSCBi7AtvvHfVpy1+gMtwfvs0tByq9s49z4Uzb+qDFXA5c6ujnx+PWn9CPwR+KBzRCVNfWw5134LXGowN7B8aP5jzhPxQWMggMnbZxk/Dp6aGxNOBg6XepkDy1TMQHbW4bYxKmrWPvgdzqUVSHQSODXnyfYO1HSJDEB44RhAoZeY8SMwGhaDYb4iR2bwOgrzCHPPE+CsTCWUJ90sUreI4KxYoyUsTiaooKvPnjHRqPrq5itA5Omn8Sqx4jBw0yrmIAx+DDP3nohJjTpC/BMRwPjL4VnPHgBY/tHcqs5AfeDikOYz9uNHy3BXv+61Bl/KAFDzu5vnBCepOQe8cqfB80tB3nEkJ9je6PlamDoRp1b4Fjl4q+/mq+ERRy78pjzUq7Vkf/ntuabwJDqGZRwvpLHr6jGRSX1H3haki/ViJ9587m2CyVLMITbLLvslQDCBTjOYm1rx7I+IlgJq8HE4B5wvP/Cz1iXPBQT/L/aI/Au/QNlRcviTLuwoAAAAABJRU5ErkJggg==" InformativeScreenshot="b01b7912b26be398364422ee68f37cc0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="230df9445f843d74e89fe6c78a943e06.jpg" Selector="&lt;html app='chrome.exe' title='רשות המיסים - מערכת דיווח מפורט' /&gt;" Url="https://shaam.taxes.gov.il/Emmfrt/frmViewDuchot.aspx?cur=2&amp;FromMenu=True" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
